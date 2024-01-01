@@ -678,22 +678,6 @@
     </style>
 
 
-
-
-
-
-
-<link rel="stylesheet" href="https://ekankotri.in/site/css/style.css?v=13_10_2022">
-<link rel="stylesheet" href="https://ekankotri.in/site/ekankotri.main.min.css?v=13_10_2022">
-<link rel="stylesheet" href="https://ekankotri.in/site/vendor/font-awesome/css/font-awesome.min.css">
-
-
-
-
-
-
-
-
 </head>
 
 <body>
@@ -757,8 +741,10 @@
 <span class="eclose">&times;</span>
 <p>Would you like to play music?</p>
 <span class="text-center">
-<a id="yes"><i class="fa fa-play-circle fa-2x" style="color: #000;"></i></a>
-<a id="no"><i class="fa fa-pause-circle fa-2x" style="color: #ff0000;"></i></a>
+
+
+<a id="yes"><i class="fa fa-play-circle fa-2x" style="color: #000;">&#9658;</i></a>
+<a id="no"><i class="fa fa-pause-circle fa-2x" style="color: #ff0000;">&#10074;&#10074;</i></a>
 </span>
 </div>
 </div>
@@ -813,31 +799,7 @@
 				$("#iframeAudio").attr("src","");
 	        },5000)
 		</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3&appId=483484165524703&autoLogAppEvents=1"></script>
-<script>
-		var scroll = true;
-		var count = 1;
-			function startScroll(){
-				$("html, body").animate({ scrollTop: $(document).height() - $(window).height() }, 205000, function() { $(this).animate({ scrollTop: 0 }, 20000); });
-				$("body,html").bind(" mousedown wheel mousewheel touchstart", function(e){
-				    count++;
-				    if(count>5){
-				        $("html,body").stop(true);
-						scroll = false;
-				    }
-					if($(e.target).is("a#yes") || $(e.target).is("a#no") || !scroll){
-						return;
-					}
-					if ( e.which > 0 || e.type == "mousedown" || e.type == "wheel" || e.type == "mousewheel" || e.type == "touchstart"){
-						$("html,body").stop(true);
-						scroll = false;
-					} 
-				});
-			}
-			setTimeout(function(){
-				startScroll();
-			},2000)
-		</script>
+
 </div>
 </div>
 </div>
@@ -848,43 +810,6 @@
 
 <script src="https://ekankotri.in/site/ekankotri.main.min.js?v=13_10_2022"></script>
 
-<script type="text/javascript">
-        /* Count Up Plugin Settings
-		-----------------------------------------------------------------------------------*/
-
-        var options = {
-            useEasing: true,
-            useGrouping: true,
-            separator: ' ',
-            decimal: '.',
-            prefix: '',
-            suffix: ''
-        };
-
-        // Set the count up numbers
-        var countup_1 = new CountUp("counter-1", 0, 502, 0, 2.5, options);
-        var countup_2 = new CountUp("counter-2", 0, 9, 0, 2.5, options);
-        var countup_3 = new CountUp("counter-3", 0, 5, 0, 2.5, options);
-        var countup_4 = new CountUp("counter-4", 0, 2, 0, 2.5, options);
-        var countup_5 = new CountUp("counter-5", 0, 73, 0, 2.5, options);
-        var countup_6 = new CountUp("counter-6", 0, 6, 0, 2.5, options);
-
-        var $CounterStart = $('#countupWedding');
-
-        // If scroll get to the waypoint, the Count up start
-        $CounterStart.waypoint(function(direction) {
-            if (direction === 'down') {
-                countup_1.start();
-                countup_2.start();
-                countup_3.start();
-                countup_4.start();
-                countup_5.start();
-                countup_6.start();
-            }
-        }, {
-            offset: '100%'
-        });
-    </script>
 
 
 
